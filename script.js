@@ -3,39 +3,40 @@
   //le footer(portant le tag <footer>), 
   //tu afficher le mot "clique" en console
   
-  /*var clickFooter = document.querySelector('footer')[0];
+  var clickFooter = document.querySelector('footer')[0];
    function onClickFooter() {
   	console.log('clique');
   }
-  clickFooter.addEventListener('click', onClickFooter);*/
+  clickFooter.addEventListener("click", onClickFooter);
 
   //ou
 
- document.querySelector('footer').addEventListener('click', onClickFooter);
+ /*document.querySelector('footer').addEventListener("click", onClickFooter);
   function onClickFooter() {
-  	console.log("clique");
-  }
+  	console.log('clique');
+  }*/
 
   //Fonctionnalité 1-bis: 
   //lorsque l'utilisateur va cliquer sur le footer, 
   //tu vas afficher en console "clic numéro x" avec x 
   //qui commence à 1 et s'incrémente de +1 à chaque clic
 
- /*var clickFooter = document.querySelector('footer')[0];
+ var clickFooter = document.querySelector('footer')[0];
  var x=1;
    function onClickFooter() {
   	console.log('clic numéro'+ x);
-  	x++
+  	x++;
   }
-  clickFooter.addEventListener('click', onClickFooter);*/
+  clickFooter.addEventListener("click", onClickFooter);
 
   //ou
 
- document.querySelector('footer').addEventListener('click', countClickFooter);
+ /*document.querySelector('footer').addEventListener("click", countClickFooter);
  var x=1;
    function countClickFooter() {
-  	console.log("clic numéro"+ x);
-  }
+  	console.log('clic numéro'+ x);
+  	x++;
+  }*/
 
 
 //Fonctionnalité 2: 
@@ -55,7 +56,7 @@
   		function visible_Menu(){
   			div.classList.toggle("collapse");
   		};
-  		btn.addEventListener('click', visible_Menu);
+  		btn.addEventListener("click", visible_Menu);
   }();
 
 
@@ -68,9 +69,9 @@
   	let btn_edit = document.querySelector('.btn.btn-sm.btn-outline-secondary')[0];
   	let text_card= document.querySelector('.card-text')[0];
   		function colorText_card(){
-  			text_card.style.color="red";
+  			text_card.style.color = "red";
   		};
-  		btn_edit.addEventListener('click', colorText_card);
+  		btn_edit.addEventListener("click", colorText_card);
   }();
 
 
@@ -91,7 +92,7 @@
   				}
   			
   		};
-  		btn_edit.addEventListener('click', colorText_card);
+  		btn_edit.addEventListener("click", colorText_card);
   }();
 
 
@@ -104,7 +105,7 @@
 
 function invisible_Bootsrap() {
   	let click_Bootstrap = document.querySelector('header');
-  		click_Bootstrap.addEventListener('dbclick', function() {
+  		click_Bootstrap.addEventListener("dbclick", function() {
   			let bootstrap = document.styleSheets[0]
 
   			if(bootstrap.disabled === false){
@@ -159,7 +160,7 @@ let move_Cards = document.getElementsByClassName('col-md-4');
 let rows = document.getElementsByClassName('row')[1];
 let rnd = document.getElementsByClassName('btn-secondary')[0];
 
-rnd.addEventListener('click', function() {
+rnd.addEventListener("click", function() {
   rows.insertBefore(move_Cards[move_Cards.length-1], move_Cards[0]);
 });
 
