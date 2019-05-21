@@ -2,12 +2,14 @@
   //Lorsque l'utilisateur va cliquer sur 
   //le footer(portant le tag <footer>), 
   //tu afficher le mot "clique" en console
-  
-  var clickFooter = document.querySelector('footer')[0];
+  function footer1() {
+  var clickFooter1 = document.querySelector('footer');
    function onClickFooter() {
   	console.log('clique');
-  }
-  clickFooter.addEventListener("click", onClickFooter);
+  };
+  clickFooter1.addEventListener("click", onClickFooter);
+};
+footer1()
 
   //ou
 
@@ -20,14 +22,16 @@
   //lorsque l'utilisateur va cliquer sur le footer, 
   //tu vas afficher en console "clic numéro x" avec x 
   //qui commence à 1 et s'incrémente de +1 à chaque clic
-
- var clickFooter = document.querySelector('footer')[0];
+function footer(){
+ var clickFooter = document.querySelector('footer');
  var x=1;
    function onClickFooter() {
   	console.log('clic numéro'+ x);
   	x++;
   }
   clickFooter.addEventListener("click", onClickFooter);
+};
+footer()
 
   //ou
 
@@ -55,9 +59,10 @@
   	let div = document.querySelector('div[class*="collapse"]');
   		function visible_Menu(){
   			div.classList.toggle("collapse");
-  		};
+  		}
   		btn.addEventListener("click", visible_Menu);
-  }();
+  }
+  btn_Menu()
 
 
   //Fonctionnalité 3:
@@ -65,35 +70,36 @@
     //le texte de la card va se mettre en rouge de façon 
     //irréversible (sauf si on recharge la page). À toi de jouer !
 
- function btn_Menu() {
-  	let btn_edit = document.querySelector('.btn.btn-sm.btn-outline-secondary')[0];
-  	let text_card= document.querySelector('.card-text')[0];
+ function btn_Menu1() {
+  	var btn_edit = document.getElementsByClassName('.btn.btn-sm.btn-outline-secondary')[0];
+  	var text_card= document.guetElementsByClasseName('.card-text')[0];
   		function colorText_card(){
   			text_card.style.color = "red";
-  		};
+  		}
   		btn_edit.addEventListener("click", colorText_card);
-  }();
-
+  }
+btn_Menu1()
 
   //Fonctionnalité 4:
     //si on clique sur le bouton "Edit" de la deuxième card,
     //le texte de la card va se mettre en vert. Si on re-clique 
     //dessus, il redevient comme avant ! 
 
-    function btn_Menu() {
-  	let btn_edit = document.querySelector('.btn-outline-secondary')[1];
+    function btn_Menu2() {
+  	var btn_edit = document.querySelectorall('.btn-outline-secondary')[1];
   	
   		function colorText_card(){
-  			let text_card= document.querySelector('.card-text')[1];
+  			var text_card= document.querySelectorall('p.card-text')[1];
   			if(text_card.style.color === 'green'){
   				text_card.style.color = '' ;
   			} else {
   				text_card.style.color = 'green';
   				}
   			
-  		};
+  		}
   		btn_edit.addEventListener("click", colorText_card);
-  }();
+  }
+  btn_Menu2()
 
 
   //Fonctionnalité 5:
